@@ -67,7 +67,7 @@ def perform_eda(df, log_transformed=False):
     
     for col in plot_features:
         plt.figure(figsize=(8,6))
-        sns.histplot(df[col], kde=True, bins=20)
+        sns.histplot(df[col], kde=False, bins=20)
         plt.title(f'Histogram of {col}')
         plt.savefig(f'{folder}/hist_{col}.png')
         plt.close()
